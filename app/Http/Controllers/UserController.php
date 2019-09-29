@@ -33,7 +33,6 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);
-        $user->roles = 1;
         $user->save();
 
         $roleuser = User::find($user->id);
@@ -59,7 +58,6 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => bcrypt($request->password)
         ]);
-        $user->roles = 0;
         $user->save();
 
         $roleuser = User::find($user->id);
@@ -174,7 +172,8 @@ class UserController extends Controller
     public function users(Request $request)
     {
         if($request->user()->hasAccess(['user.users']) == true){
-            return response()->json(User::all());
+            $user = User::select('users.*','roles.*')->join('role_users', 'role_users.user_id', '=', 'users.id')->join('roles', 'role_users.role_id', '=', 'roles.id')->get();
+            return response()->json($user);
         }else{
             return response()->json([
                 'message' => 'Error'

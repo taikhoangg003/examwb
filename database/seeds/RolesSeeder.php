@@ -16,8 +16,6 @@ class RolesSeeder extends Seeder
     		'name' => 'Member',
     		'slug' => 'member',
     		'permissions' => [
-    			'user.login' => true,
-    			'user.user' => true,
     			'user.update' => true,
     		]
     	]);
@@ -25,8 +23,6 @@ class RolesSeeder extends Seeder
     		'name' => 'Admin', 
     		'slug' => 'admin',
     		'permissions' => [
-    			'user.login' => true,
-    			'user.user' => true,
     			'user.update' => true,
     			'user.users' => true,
     		]
