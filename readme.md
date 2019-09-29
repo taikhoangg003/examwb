@@ -9,17 +9,33 @@
 
 ## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Github Account
+- Heroku Account
+- Postman
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1 . Fork https://github.com/tkgg002/examwb.git to github account.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2 . Deploy code in Heroku
+	+ Create new app
+	+ Tab Deloy :
+		- Deployment method : connect to Github
+		- App connected to GitHub : choice "examwb"
+		- Manual deploy : Click Deploy Branch
+	+ Tab Resources :
+		- Add add-on Heroku Postgres or JawsDB MySQL
+	+ More-> Run Console:
+		Create key app
+		- Generate the new key
+				php artisan key:generate
+		- Roll back all the migrations in your application
+				php artisan migrate:reset (Redeploy)
+		- Run all the migrations in your application
+				php artisan migrate --seed
+		- Create personal access client
+				php artisan passport:install
+				php artisan passport:keys
+3 . Run API
+	+
 
 ## Learning Laravel
 
