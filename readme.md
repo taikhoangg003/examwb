@@ -27,20 +27,21 @@ Restful API using for Members management.
 
 ## Deploy in Heroku
 
-1. Fork [LINK Github] (https://github.com/tkgg002/examwb.git) to Github account.
+1. Login Github and fork [LINK Github](https://github.com/tkgg002/examwb.git) to Github account.
 
 2. Deploy code in Heroku
 	* Create new app
-	* Tab Deloy :
+	* Deploy (Tab Deploy) :
 		* Deployment method : connect to Github
 		* App connected to GitHub : choice "examwb"
 		* Manual deploy : Click Deploy Branch
-	* Tab Resources :
+	* Add database (Tab Resources) :
 		* Add add-on Heroku Postgres
-	* More-> Run Console:
+	* Config (More-> Run Console) :
 		* Generate the new key : `php artisan key:generate`
 		* Roll back all the migrations in your application : `php artisan migrate:reset`
 		* Run all the migrations in your application : `php artisan migrate --seed`
+		* Run create `php artisan passport:install`
 
 ## API Document : [LINK DOCUMENT](https://documenter.getpostman.com/view/8975014/SVtN3B8z?version=latest)
 
