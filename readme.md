@@ -1,89 +1,58 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## About
 
-## About Laravel
+Restful API using for Members management.
+
+1. Add new Admin
+2. Register Member
+3. Login OAuth2
+4. Update user profile : name, birthday, avatar
+5. Admin can see the Users list and all permissions
+6. Admin can receive email notification from User updated and registered.
+
+## Tech
+
+- Framework : Laravel 6.x (php7.2)
+- Database : MySQL 5.7
+- Email provider : mailtrap.io
+- Deployment: Heroku
+- API Document: Postman
+
+## Requirements
 
 - Github Account
 - Heroku Account
 - Postman
 
-1 . Fork https://github.com/tkgg002/examwb.git to github account.
+## Deploy in Heroku
 
-2 . Deploy code in Heroku
-	+ Create new app
-	+ Tab Deloy :
-		- Deployment method : connect to Github
-		- App connected to GitHub : choice "examwb"
-		- Manual deploy : Click Deploy Branch
-	+ Tab Resources :
-		- Add add-on Heroku Postgres or JawsDB MySQL
-	+ More-> Run Console:
-		Create key app
-		- Generate the new key
-				php artisan key:generate
-		- Roll back all the migrations in your application
-				php artisan migrate:reset (Redeploy)
-		- Run all the migrations in your application
-				php artisan migrate --seed
-		- Create personal access client
-				php artisan passport:install
-				php artisan passport:keys
-3 . Run API
-	+
+1. Fork https://github.com/tkgg002/examwb.git to github account.
 
-## Learning Laravel
+2. Deploy code in Heroku
+	* Create new app
+	* Tab Deloy :
+		* Deployment method : connect to Github
+		* App connected to GitHub : choice "examwb"
+		* Manual deploy : Click Deploy Branch
+	* Tab Resources :
+		* Add add-on Heroku Postgres or JawsDB MySQL
+	* More-> Run Console:
+		* Generate the new key
+```shell
+	php artisan key:generate
+```
+		* Roll back all the migrations in your application
+```shell
+	php artisan migrate:reset
+```
+		* Run all the migrations in your application
+```shell
+	php artisan migrate --seed
+```
+3. Run API
+	*
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
 ## License
 
